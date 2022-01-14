@@ -6,5 +6,7 @@ jobs:
     steps:
       - shell: pwsh
         run: |
-          Write-Host -Object 'Hello ::add-mask::world'
+          Write-Host -Object '::add-mask::world'
           Write-Host -Object unmasked
+          Write-Host -Object 'Hello world'
+          Write-Host -Object world123
