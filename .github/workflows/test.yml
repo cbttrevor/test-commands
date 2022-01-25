@@ -6,6 +6,7 @@ jobs:
     steps:
     - run: mkdir /tmp/modules && pip3 install --root /tmp/modules/ jinja2-cli
     - run: jinja2
+    - run: ls -R /tmp/modules
   job1:
     runs-on: ubuntu-latest
     steps:
