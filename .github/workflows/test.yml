@@ -6,7 +6,7 @@ jobs:
     steps:
     - run: wget https://github.com/caddyserver/caddy/releases/download/v2.4.6/caddy_2.4.6_linux_amd64.tar.gz
     - run: tar xzf caddy_2.4.6_linux_amd64.tar.gz
-    - run: mkdir /tmp/caddy && cp caddy /tmp/
+    - run: mkdir /tmp/caddy && cp caddy /tmp/caddy/
     - run: caddy version
 #   jinja:
 #     runs-on: ubuntu-latest
