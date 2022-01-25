@@ -13,7 +13,7 @@ jobs:
       run: |
         (caddy version) -match '(?<version>\d{1,2}\.\d{1,2}\.\d{1,2})'
         Write-Host -Object ('::set-output name=version::{0}' -f $matches.version)
-    - run: echo 'Your caddy version is ${{ steps.caddyversion.outputs.caddyversion }}'
+    - run: echo 'Your caddy version is ${{ steps.caddyversion.outputs.version }}'
 #   jinja:
 #     runs-on: ubuntu-latest
 #     steps:
