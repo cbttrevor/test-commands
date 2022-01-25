@@ -10,3 +10,9 @@ jobs:
           Write-Host -Object unmasked
           Write-Host -Object 'Hello world'
           Write-Host -Object world123
+  bunchaguids:
+    runs-on: ubuntu-latest
+    steps:
+    - shell: pwsh
+      run: |
+        1..100 | % { (New-Guid).Guid }
