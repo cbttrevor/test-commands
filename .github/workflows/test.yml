@@ -1,13 +1,20 @@
 on: push
 
 jobs:
-  jinja:
+  caddy:
     runs-on: ubuntu-latest
     steps:
-    - run: mkdir /tmp/modules && pip3 install --root /tmp/modules/ jinja2-cli
-    - run: echo '/tmp/modules/home/runner/.local/bin/' >> $GITHUB_PATH
-    - run: ls -R /tmp/modules
-    - run: jinja2
+    - run: wget https://github.com/caddyserver/caddy/releases/download/v2.4.6/caddy_2.4.6_linux_amd64.tar.gz
+    - run: tar xzf caddy_2.4.6_linux_amd64.tar.gz
+    - run: mkdir /tmp/caddy && cp caddy /tmp
+    - run: caddy version
+#   jinja:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - run: mkdir /tmp/modules && pip3 install --root /tmp/modules/ jinja2-cli
+#     - run: echo '/tmp/modules/home/runner/.local/bin/' >> $GITHUB_PATH
+#     - run: ls -R /tmp/modules
+#     - run: jinja2
   job1:
     runs-on: ubuntu-latest
     steps:
