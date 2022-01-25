@@ -15,4 +15,9 @@ jobs:
     steps:
     - shell: pwsh
       run: |
-        1..100 | % { (New-Guid).Guid }
+        Write-Host -Object '::group::1'
+        1..100 | % { (New-Guid).Guid; if (($PSItem % 5) -eq 0) { 
+          Write-Host -Object '::endgroup::'
+          Write-Host -Object ('::group::Group {0}' -f ($PSItem+1))
+        }
+        Write-Host -Object '::endgroup::'
