@@ -8,7 +8,8 @@ jobs:
     - run: tar xzf caddy_2.4.6_linux_amd64.tar.gz
     - run: mkdir /tmp/caddy && cp caddy /tmp/caddy/
     - run: echo /tmp/caddy/ >> $GITHUB_PATH
-    - run: caddy version
+    - id: caddyversion
+      run: caddy version
 #   jinja:
 #     runs-on: ubuntu-latest
 #     steps:
