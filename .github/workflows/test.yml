@@ -4,7 +4,7 @@ jobs:
   jinja:
     runs-on: ubuntu-latest
     steps:
-    - run: pip3 install --user jinja2-cli
+    - run: mkdir /root/modules && pip3 install --root $HOME/modules/ jinja2-cli
     - run: jinja2
   job1:
     runs-on: ubuntu-latest
