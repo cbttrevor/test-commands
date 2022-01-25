@@ -1,6 +1,11 @@
 on: push
 
 jobs:
+  jinja:
+    runs-on: ubuntu-latest
+    steps:
+    - run: pip3 install --user jinja2-cli
+    - run: jinja2
   job1:
     runs-on: ubuntu-latest
     steps:
