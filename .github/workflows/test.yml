@@ -11,7 +11,7 @@ jobs:
     - id: caddyversion
       shell: pwsh
       run: |
-        caddy version -match '(?<version>\d{1,2}\.\d{1,2}\.\d{1,2})'
+        (caddy version) -match '(?<version>\d{1,2}\.\d{1,2}\.\d{1,2})'
         Write-Host -Object ('::set-output name=version::{0}' -f $matches.version)
     - run: echo 'Your caddy version is ${{ steps.caddyversion.outputs.caddyversion }}'
 #   jinja:
