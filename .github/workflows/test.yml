@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: mkdir /tmp/modules && pip3 install --root /tmp/modules/ jinja2-cli
-    - run: echo '/tmp/modules/usr/local/bin/' >> $GITHUB_PATH
+    - run: echo '/tmp/modules/home/runner/.local/bin/' >> $GITHUB_PATH
     - run: ls -R /tmp/modules
     - run: jinja2
   job1:
