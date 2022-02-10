@@ -29,7 +29,7 @@ jobs:
           Write-Host -Object '::add-mask::world'
           Write-Host -Object unmasked
           Write-Host -Object 'Hello world'
-          Write-Host -Object '::warning line=3,file=code.ps1'
+          Write-Host -Object '::warning line=3,file=code.ps1::This is a warning on line 3'
           Write-Host -Object world123
   bunchaguids:
     runs-on: ubuntu-latest
